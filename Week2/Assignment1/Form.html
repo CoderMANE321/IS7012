@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Order Form</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+    <main class="page-container">
+        <section class="order-card">
+            <header class="form-header">
+                <h1>Late Night Eatz</h1>
+                <p>Build your meal and place your order.</p>
+            </header>
+
+            <!-- Order Form -->
+            <form action="#" method="post">
+
+                <!-- Customer Information -->
+                <fieldset>
+                    <legend>Customer Information</legend>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your full name"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="name@example.com"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="513-555-5555">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="order-type">Order Type</label>
+                            <select id="order-type" name="order-type">
+                                <option value="pickup">Pickup</option>
+                                <option value="delivery">Delivery</option>
+                                <option value="dine-in">Dine In</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Meal Selection -->
+                <fieldset>
+                    <legend>Choose Your Meal</legend>
+
+                    <div class="menu-options">
+                        <label class="option-card">
+                            <input type="radio" name="meal" value="burger" required>
+                            <span>
+                                <strong>Classic Cheese Burger</strong>
+                                <small>Beef patty, lettuce, tomato, cheese</small>
+                            </span>
+                            <span class="price">$10.99</span>
+                        </label>
+
+                        <label class="option-card">
+                            <input type="radio" name="meal" value="chicken">
+                            <span>
+                                <strong>Grilled Chicken Sandwich</strong>
+                                <small>Chicken breast, lettuce, tomato, mayo</small>
+                            </span>
+                            <span class="price">$11.49</span>
+                        </label>
+
+                        <label class="option-card">
+                            <input type="radio" name="meal" value="pasta">
+                            <span>
+                                <strong>Meat Lovers Pizza</strong>
+                                <small>Pepperoni, sausage, ham, bacon</small>
+                            </span>
+                            <span class="price">$13.99</span>
+                        </label>
+
+                        <label class="option-card">
+                            <input type="radio" name="meal" value="salad">
+                            <span>
+                                <strong>Garden Salad</strong>
+                                <small>Mixed greens, tomatoes, cucumber, cheese</small>
+                            </span>
+                            <span class="price">$8.49</span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <!-- Extras Selection -->
+                <fieldset>
+                    <legend>Add Extras</legend>
+
+                    <div class="checkbox-grid">
+                        <label>
+                            <input type="checkbox" name="extras" value="fries">
+                            French Fries
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="extras" value="cheese">
+                            Extra Cheese
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="extras" value="bacon">
+                            Bacon
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="extras" value="drink">
+                            Fountain Drink
+                        </label>
+                    </div>
+                </fieldset>
+
+                <!-- Order Details -->  
+                <fieldset>
+                    <legend>Order Details</legend>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="quantity">Quantity</label>
+                            <input
+                                type="number"
+                                id="quantity"
+                                name="quantity"
+                                min="1"
+                                max="10"
+                                value="1">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pickup-time">Preferred Time</label>
+                            <input
+                                type="time"
+                                id="pickup-time"
+                                name="pickup-time">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="instructions">Special Instructions</label>
+                        <textarea
+                            id="instructions"
+                            name="instructions"
+                            rows="4"
+                            placeholder="Allergies, substitutions, sauce preferences, etc."></textarea>
+                    </div>
+                </fieldset>
+
+                <!-- Form Actions -->
+                <div class="form-actions">
+                    <button type="reset" class="secondary-button">Clear Form</button>
+                    <button type="submit" class="primary-button">Place Order</button>
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>
