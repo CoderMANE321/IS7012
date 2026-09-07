@@ -1,0 +1,79 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    background-color: #f4f7fb;
+    color: #1f2937;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+.brand-nav {
+    background-color: #18234f;
+}
+
+.brand-dot {
+    color: #b8c6ff;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #c9d4ff;
+}
+
+.hero {
+    background: linear-gradient(135deg, #18234f, #354c86);
+    color: #ffffff;
+}
+
+.section-label {
+    color: #354c86;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12rem;
+}
+
+.card {
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.approach-panel {
+    background-color: #e5ebfa;
+}
+
+.team-photo {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: center 65%;
+}
+
+.team-initials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 280px;
+    color: #ffffff;
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.initials-blue {
+    background: linear-gradient(135deg, #244b70, #377e9b);
+}
+
+.initials-purple {
+    background: linear-gradient(135deg, #493766, #776199);
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #b36b00;
+    outline-offset: 4px;
+}

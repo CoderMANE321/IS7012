@@ -1,0 +1,271 @@
+﻿@page
+@model IndexModel
+
+@{
+    ViewData["Title"] = "Technology Recruiting";
+}
+
+<section class="hero py-5">
+    <div class="container py-lg-4">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <span class="badge bg-light text-dark mb-3">
+                    PEOPLE FIRST. TECHNOLOGY FOCUSED.
+                </span>
+
+                <h1 class="display-4 fw-bold">
+                    Great technology starts with great people.
+                </h1>
+
+                <p class="lead mt-3">
+                    RecruitCat connects ambitious technology professionals
+                    with companies building what comes next.
+                </p>
+
+                <a class="btn btn-light btn-lg mt-3" asp-page="/OurTeam">
+                    Meet your recruiting team
+                </a>
+            </div>
+
+            <div class="col-lg-6">
+                <figure class="bg-white rounded-4 p-3 shadow mb-0">
+                    <img src="~/images/Pipeline.png"
+                         class="img-fluid rounded"
+                         alt="Data pipeline project created by Deonta Williams" />
+
+                    <figcaption class="text-dark small mt-3">
+                        We understand the work behind the résumé.
+                        A project from our founder’s technology portfolio.
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container py-5" aria-labelledby="specialties-heading">
+    <div class="mb-4">
+        <p class="section-label">OUR SPECIALTIES</p>
+        <h2 id="specialties-heading">Find the people who move your business forward.</h2>
+        <p class="text-muted">
+            Focused recruiting for teams where technical ability matters.
+        </p>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <article class="card h-100 border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <span class="badge bg-primary mb-3">Build</span>
+                    <h3 class="h4">Software Engineering</h3>
+                    <p class="mb-0">
+                        Connect with developers who turn business needs
+                        into reliable applications and useful digital products.
+                    </p>
+                </div>
+            </article>
+        </div>
+
+        <div class="col-md-4">
+            <article class="card h-100 border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <span class="badge bg-primary mb-3">Discover</span>
+                    <h3 class="h4">Data &amp; Analytics</h3>
+                    <p class="mb-0">
+                        Find data engineers and analysts who make information
+                        accessible, trustworthy, and useful for decisions.
+                    </p>
+                </div>
+            </article>
+        </div>
+
+        <div class="col-md-4">
+            <article class="card h-100 border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <span class="badge bg-primary mb-3">Connect</span>
+                    <h3 class="h4">Business Technology</h3>
+                    <p class="mb-0">
+                        Hire professionals who connect technology,
+                        enterprise systems, and everyday business operations.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="container pb-5" aria-labelledby="approach-heading">
+    <div class="approach-panel rounded-4 p-4 p-md-5">
+        <div class="row align-items-center g-4">
+            <div class="col-md-8">
+                <h2 id="approach-heading">A conversation before a placement.</h2>
+                <p class="mb-0">
+                    We start by understanding your goals, your team,
+                    and the problems you want to solve. Then we look for
+                    people whose skills and ambitions fit that direction.
+                </p>
+            </div>
+
+            <div class="col-md-4 text-md-end">
+                <a class="btn btn-primary" asp-page="/OurTeam">
+                    Get to know RecruitCat
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container pb-5">
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <h2 class="h3">Recruiting services</h2>
+                    <p>
+                        Whether you need a permanent team member or support
+                        for a short-term project, we help you find the right fit.
+                    </p>
+                    <ul class="mb-0">
+                        <li>Direct-hire recruiting for permanent positions</li>
+                        <li>Contract staffing for projects and temporary needs</li>
+                        <li>Contract-to-hire placements</li>
+                        <li>Résumé reviews and interview preparation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <h2 class="h3">Industries we serve</h2>
+                    <p>
+                        We recruit technology professionals for businesses
+                        across Greater Cincinnati and beyond.
+                    </p>
+                    <ul class="mb-0">
+                        <li>Manufacturing and automotive</li>
+                        <li>Healthcare and health technology</li>
+                        <li>Banking and financial services</li>
+                        <li>Software and IT consulting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container pb-5">
+    <p class="section-label">YOUR NEXT CHAPTER</p>
+    <h2 class="mb-4">Apply online. Move forward with confidence.</h2>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <span class="badge bg-primary mb-3">Step 1</span>
+                    <h3 class="h4">Create your profile</h3>
+                    <p class="mb-0">
+                        Start an online candidate profile with your contact
+                        information, career interests, and preferred work location.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <span class="badge bg-primary mb-3">Step 2</span>
+                    <h3 class="h4">Upload your résumé</h3>
+                    <p class="mb-0">
+                        Share your experience, highlight your skills, and
+                        select opportunities that match your goals.
+                        Submit your application through our website.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <span class="badge bg-primary mb-3">Step 3</span>
+                    <h3 class="h4">Connect with a recruiter</h3>
+                    <p class="mb-0">
+                        A recruiter reviews your application and contacts
+                        you about potential matches. We help you prepare
+                        for interviews and understand the next steps.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container pb-5">
+    <p class="section-label">CLIENT AND CANDIDATE STORIES</p>
+    <h2 class="mb-4">A more personal hiring experience.</h2>
+
+    <div class="row g-4">
+        <div class="col-md-6">
+            <figure class="card h-100 border-0 shadow-sm mb-0">
+                <div class="card-body p-4">
+                    <blockquote class="blockquote">
+                        <p>
+                            “RecruitCat took the time to understand our
+                            reporting challenges. We found a data engineer
+                            who could contribute to the team from the start.”
+                        </p>
+                    </blockquote>
+                    <figcaption class="mt-3 text-muted">
+                        Morgan Reed, IT Manager at Riverbend Manufacturing
+                    </figcaption>
+                </div>
+            </figure>
+        </div>
+
+        <div class="col-md-6">
+            <figure class="card h-100 border-0 shadow-sm mb-0">
+                <div class="card-body p-4">
+                    <blockquote class="blockquote">
+                        <p>
+                            “My recruiter helped me explain my project
+                            experience and prepare for interviews.
+                            I felt informed throughout the hiring process.”
+                        </p>
+                    </blockquote>
+                    <figcaption class="mt-3 text-muted">
+                        Taylor Brooks, Software Developer
+                    </figcaption>
+                </div>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<section class="container pb-5">
+    <div class="approach-panel rounded-4 p-4 p-md-5">
+        <div class="row g-4">
+            <div class="col-md-7">
+                <h2>Let’s talk about your next move.</h2>
+                <p class="mb-0">
+                    Looking for your next opportunity or your next team member?
+                    Contact RecruitCat to discuss your goals.
+                </p>
+            </div>
+
+            <div class="col-md-5">
+                <h3 class="h5">RecruitCat</h3>
+                <address class="mb-0">
+                    CincyHub Drive, Suite 200<br />
+                    Cincinnati, OH 45202<br />
+                    Phone: <a href="tel:+15135550148">(513) 555-0148</a>
+                </address>
+                <p class="small text-muted mt-2 mb-0">
+                    Office visits by appointment.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
