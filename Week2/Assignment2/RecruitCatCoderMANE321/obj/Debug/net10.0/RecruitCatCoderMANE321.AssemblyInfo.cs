@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RecruitCatCoderMANE321")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6eb7ec2a4c16f28802191d49e1bbaee95a289a7e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cf9a4c44df61d097e5fa2d93637633e3eecb9bd9")]
 [assembly: System.Reflection.AssemblyProductAttribute("RecruitCatCoderMANE321")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RecruitCatCoderMANE321")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
