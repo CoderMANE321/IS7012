@@ -8,19 +8,19 @@
     "net10.0": []
   },
   "packageFolders": {
-    "/Users/deontawilliams/.nuget/packages/": {}
+    "/Users/tae/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/deontawilliams/Desktop/Source/IS7012/Week2/Assignment2/RecruitCatCoderMANE321/RecruitCatCoderMANE321.csproj",
+      "projectUniqueName": "/Users/tae/Desktop/Source/Repos/IS7012/Week2/Assignment2/RecruitCatCoderMANE321/RecruitCatCoderMANE321.csproj",
       "projectName": "RecruitCatCoderMANE321",
-      "projectPath": "/Users/deontawilliams/Desktop/Source/IS7012/Week2/Assignment2/RecruitCatCoderMANE321/RecruitCatCoderMANE321.csproj",
-      "packagesPath": "/Users/deontawilliams/.nuget/packages/",
-      "outputPath": "/Users/deontawilliams/Desktop/Source/IS7012/Week2/Assignment2/RecruitCatCoderMANE321/obj/",
+      "projectPath": "/Users/tae/Desktop/Source/Repos/IS7012/Week2/Assignment2/RecruitCatCoderMANE321/RecruitCatCoderMANE321.csproj",
+      "packagesPath": "/Users/tae/.nuget/packages/",
+      "outputPath": "/Users/tae/Desktop/Source/Repos/IS7012/Week2/Assignment2/RecruitCatCoderMANE321/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/deontawilliams/.nuget/NuGet/NuGet.Config"
+        "/Users/tae/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
