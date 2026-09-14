@@ -43,6 +43,89 @@
     </div>
 </section>
 
+<section class="container py-5">
+    <div class="mb-4">
+        <p class="section-label">RECRUITCAT MANAGEMENT</p>
+        <h2>Manage recruiting data.</h2>
+        <p class="text-muted">
+            View and manage candidates, companies, job titles, and industries.
+        </p>
+    </div>
+
+    <div class="row g-4">
+
+        <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body p-4 d-flex flex-column">
+                    <h3 class="h4">Candidates</h3>
+
+                    <p class="text-muted">
+                        View and manage candidate profiles and recruiting information.
+                    </p>
+
+                    <a asp-page="/Candidates/Index"
+                       class="btn btn-primary mt-auto">
+                        View Candidates
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body p-4 d-flex flex-column">
+                    <h3 class="h4">Companies</h3>
+
+                    <p class="text-muted">
+                        Manage companies and the positions they are recruiting for.
+                    </p>
+
+                    <a asp-page="/Companies/Index"
+                       class="btn btn-primary mt-auto">
+                        View Companies
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body p-4 d-flex flex-column">
+                    <h3 class="h4">Job Titles</h3>
+
+                    <p class="text-muted">
+                        Manage recruiting positions, salaries, and job information.
+                    </p>
+
+                    <a asp-page="/JobTitles/Index"
+                       class="btn btn-primary mt-auto">
+                        View Job Titles
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body p-4 d-flex flex-column">
+                    <h3 class="h4">Industries</h3>
+
+                    <p class="text-muted">
+                        Manage the industries used throughout RecruitCat.
+                    </p>
+
+                    <a asp-page="/Industries/Index"
+                       class="btn btn-primary mt-auto">
+                        View Industries
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
 <section class="container py-5" aria-labelledby="specialties-heading">
     <div class="mb-4">
         <p class="section-label">OUR SPECIALTIES</p>

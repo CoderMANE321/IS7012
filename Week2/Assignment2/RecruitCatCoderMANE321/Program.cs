@@ -1,4 +1,10 @@
+using Microsoft.EntityFrameworkCore;
+using RecruitCatCoderMANE321.Data;
+
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<RecruitCatContext>(options =>
+    options.UseSqlite(
+        builder.Configuration.GetConnectionString("RecruitCatContext")));
 
 // Add services to the container.
 builder.Services.AddRazorPages();
