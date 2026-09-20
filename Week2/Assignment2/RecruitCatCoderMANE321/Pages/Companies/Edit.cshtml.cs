@@ -36,7 +36,7 @@ namespace RecruitCatCoderMANE321.Pages.Companies
                 return NotFound();
             }
             Company = company;
-           ViewData["IndustryId"] = new SelectList(_context.Industries, "Id", "Id");
+            ViewData["IndustryId"] = new SelectList(_context.Industries, "Id", "Name", Company.IndustryId);
             return Page();
         }
 
@@ -46,6 +46,7 @@ namespace RecruitCatCoderMANE321.Pages.Companies
         {
             if (!ModelState.IsValid)
             {
+                ViewData["IndustryId"] = new SelectList(_context.Industries, "Id", "Name");
                 return Page();
             }
 

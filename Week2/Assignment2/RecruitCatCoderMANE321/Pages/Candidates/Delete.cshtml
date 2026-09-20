@@ -58,19 +58,19 @@
             @Html.DisplayNameFor(model => model.Candidate.Company)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Candidate.Company.Id)
+            @Model.Candidate.Company?.Name
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Candidate.JobTitle)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Candidate.JobTitle.Id)
+            @Model.Candidate.JobTitle?.Title
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Candidate.Industry)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Candidate.Industry.Id)
+            @Model.Candidate.Industry?.Name
         </dd>
     </dl>
     

@@ -30,6 +30,8 @@ namespace RecruitCatCoderMANE321.Pages.Companies
 
             var company = await _context.Companies
                 .Include(c => c.Industry)
+                .Include(c => c.Candidates)
+                    .ThenInclude(c => c.JobTitle)
                 .FirstOrDefaultAsync(m => m.Id == id);
 
             if (company is not null)

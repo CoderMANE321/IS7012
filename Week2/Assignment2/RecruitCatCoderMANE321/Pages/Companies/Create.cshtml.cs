@@ -21,7 +21,7 @@ namespace RecruitCatCoderMANE321.Pages.Companies
 
         public IActionResult OnGet()
         {
-        ViewData["IndustryId"] = new SelectList(_context.Industries, "Id", "Name");
+            ViewData["IndustryId"] = new SelectList(_context.Industries, "Id", "Name", Company.IndustryId);
             return Page();
         }
 
@@ -33,6 +33,7 @@ namespace RecruitCatCoderMANE321.Pages.Companies
         {
             if (!ModelState.IsValid)
             {
+                ViewData["IndustryId"] = new SelectList(_context.Industries, "Id", "Name");
                 return Page();
             }
 
