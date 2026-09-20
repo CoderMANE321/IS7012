@@ -36,9 +36,23 @@ namespace RecruitCatCoderMANE321.Pages.Candidates
                 return NotFound();
             }
             Candidate = candidate;
-           ViewData["CompanyId"] = new SelectList(_context.Companies, "Id", "Id");
-           ViewData["IndustryId"] = new SelectList(_context.Industries, "Id", "Id");
-           ViewData["JobTitleId"] = new SelectList(_context.JobTitles, "Id", "Id");
+            ViewData["CompanyId"] = new SelectList(
+                _context.Companies,
+                "Id",
+                "Name"
+            );
+
+            ViewData["IndustryId"] = new SelectList(
+                _context.Industries,
+                "Id",
+                "Name"
+            );
+
+            ViewData["JobTitleId"] = new SelectList(
+                _context.JobTitles,
+                "Id",
+                "Title"
+            );
             return Page();
         }
 
@@ -48,6 +62,23 @@ namespace RecruitCatCoderMANE321.Pages.Candidates
         {
             if (!ModelState.IsValid)
             {
+                ViewData["CompanyId"] = new SelectList(
+                    _context.Companies,
+                    "Id",
+                    "Name"
+                );
+
+                ViewData["IndustryId"] = new SelectList(
+                    _context.Industries,
+                    "Id",
+                    "Name"
+                );
+
+                ViewData["JobTitleId"] = new SelectList(
+                    _context.JobTitles,
+                    "Id",
+                    "Title"
+                );
                 return Page();
             }
 

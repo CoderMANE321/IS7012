@@ -71,13 +71,13 @@
                 @Html.DisplayFor(modelItem => item.IsAvailable)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Company.Id)
+                @item.Company?.Name
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.JobTitle.Id)
+                @item.JobTitle?.Title)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Industry.Id)
+                @item.Industry?.Name)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |

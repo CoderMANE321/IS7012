@@ -33,6 +33,7 @@ namespace RecruitCatCoderMANE321.Pages.Candidates
             if (candidate is not null)
             {
                 Candidate = candidate;
+                
 
                 return Page();
             }
