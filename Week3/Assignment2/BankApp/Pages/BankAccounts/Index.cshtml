@@ -2,7 +2,7 @@
 @model BankApp.Pages.BankAccounts.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Bank Accounts";
 }
 
 <h1>Index</h1>
@@ -13,9 +13,7 @@
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.BankAccount[0].AccountNumber)
-            </th>
+
             <th>
                 @Html.DisplayNameFor(model => model.BankAccount[0].AccountType)
             </th>
@@ -28,9 +26,6 @@
     <tbody>
 @foreach (var item in Model.BankAccount) {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.AccountNumber)
-            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.AccountType)
             </td>
