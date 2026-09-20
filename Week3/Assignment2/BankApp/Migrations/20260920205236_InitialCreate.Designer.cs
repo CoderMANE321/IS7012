@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BankApp.Migrations
 {
     [DbContext(typeof(BankContext))]
-    [Migration("20260913191247_InitialCreate")]
+    [Migration("20260920205236_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -42,25 +42,13 @@ namespace BankApp.Migrations
                     b.ToTable("AccountHolders");
                 });
 
-            modelBuilder.Entity("AccountHolderAccount", b =>
-                {
-                    b.Property<int>("AccountHolderId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("BankAccountId")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("AccountHolderId", "BankAccountId");
-
-                    b.HasIndex("BankAccountId");
-
-                    b.ToTable("AccountHolderAccounts");
-                });
-
             modelBuilder.Entity("BankAccount", b =>
                 {
                     b.Property<int>("BankAccountId")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("AccountHolderId")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("AccountNumber")
@@ -76,10 +64,12 @@ namespace BankApp.Migrations
 
                     b.HasKey("BankAccountId");
 
+                    b.HasIndex("AccountHolderId");
+
                     b.ToTable("BankAccounts");
                 });
 
-            modelBuilder.Entity("AccountHolderAccount", b =>
+            modelBuilder.Entity("BankAccount", b =>
                 {
                     b.HasOne("AccountHolder", "AccountHolder")
                         .WithMany("BankAccounts")
@@ -87,25 +77,12 @@ namespace BankApp.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("BankAccount", "BankAccount")
-                        .WithMany("AccountHolders")
-                        .HasForeignKey("BankAccountId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("AccountHolder");
-
-                    b.Navigation("BankAccount");
                 });
 
             modelBuilder.Entity("AccountHolder", b =>
                 {
                     b.Navigation("BankAccounts");
-                });
-
-            modelBuilder.Entity("BankAccount", b =>
-                {
-                    b.Navigation("AccountHolders");
                 });
 #pragma warning restore 612, 618
         }

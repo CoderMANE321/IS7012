@@ -34,7 +34,16 @@ namespace BankApp.Pages.BankAccounts
             {
                 return NotFound();
             }
+
             BankAccount = bankaccount;
+
+            ViewData["AccountHolderId"] = new SelectList(
+                _context.AccountHolders,
+                "AccountHolderId",
+                "FullName",
+                BankAccount.AccountHolderId
+            );
+
             return Page();
         }
 
@@ -44,6 +53,13 @@ namespace BankApp.Pages.BankAccounts
         {
             if (!ModelState.IsValid)
             {
+                ViewData["AccountHolderId"] = new SelectList(
+                    _context.AccountHolders,
+                    "AccountHolderId",
+                    "FullName",
+                    BankAccount.AccountHolderId
+                );
+
                 return Page();
             }
 

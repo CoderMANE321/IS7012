@@ -14,6 +14,9 @@
     <thead>
         <tr>
             <th>
+                Account Holder
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.BankAccount[0].AccountNumber)
             </th>
             <th>
@@ -22,12 +25,14 @@
             <th>
                 @Html.DisplayNameFor(model => model.BankAccount[0].Balance)
             </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model.BankAccount) {
         <tr>
+            <td>
+                @item.AccountHolder?.FullName
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.AccountNumber)
             </td>

@@ -20,6 +20,12 @@ namespace BankApp.Pages.BankAccounts
 
         public IActionResult OnGet()
         {
+            ViewData["AccountHolderId"] = new SelectList(
+                _context.AccountHolders,
+                "AccountHolderId",
+                "FullName"
+            );
+
             return Page();
         }
 
@@ -31,6 +37,12 @@ namespace BankApp.Pages.BankAccounts
         {
             if (!ModelState.IsValid)
             {
+                ViewData["AccountHolderId"] = new SelectList(
+                    _context.AccountHolders,
+                    "AccountHolderId",
+                    "FullName"
+                );
+
                 return Page();
             }
 

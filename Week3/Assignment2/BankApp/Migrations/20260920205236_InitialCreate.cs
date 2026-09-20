@@ -33,54 +33,34 @@ namespace BankApp.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     AccountNumber = table.Column<string>(type: "TEXT", nullable: false),
                     AccountType = table.Column<string>(type: "TEXT", nullable: false),
-                    Balance = table.Column<decimal>(type: "TEXT", nullable: false)
+                    Balance = table.Column<decimal>(type: "TEXT", nullable: false),
+                    AccountHolderId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_BankAccounts", x => x.BankAccountId);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "AccountHolderAccounts",
-                columns: table => new
-                {
-                    AccountHolderId = table.Column<int>(type: "INTEGER", nullable: false),
-                    BankAccountId = table.Column<int>(type: "INTEGER", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_AccountHolderAccounts", x => new { x.AccountHolderId, x.BankAccountId });
                     table.ForeignKey(
-                        name: "FK_AccountHolderAccounts_AccountHolders_AccountHolderId",
+                        name: "FK_BankAccounts_AccountHolders_AccountHolderId",
                         column: x => x.AccountHolderId,
                         principalTable: "AccountHolders",
                         principalColumn: "AccountHolderId",
                         onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_AccountHolderAccounts_BankAccounts_BankAccountId",
-                        column: x => x.BankAccountId,
-                        principalTable: "BankAccounts",
-                        principalColumn: "BankAccountId",
-                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_AccountHolderAccounts_BankAccountId",
-                table: "AccountHolderAccounts",
-                column: "BankAccountId");
+                name: "IX_BankAccounts_AccountHolderId",
+                table: "BankAccounts",
+                column: "AccountHolderId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "AccountHolderAccounts");
+                name: "BankAccounts");
 
             migrationBuilder.DropTable(
                 name: "AccountHolders");
-
-            migrationBuilder.DropTable(
-                name: "BankAccounts");
         }
     }
 }

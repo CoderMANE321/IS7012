@@ -1,4 +1,5 @@
 using System.ComponentModel;
+
 public class AccountHolder
 {
     public int AccountHolderId { get; set; }
@@ -9,6 +10,7 @@ public class AccountHolder
     [DisplayName("Last Name")]
     public string LastName { get; set; } = string.Empty;
 
+    [DisplayName("Full Name")]
     public string FullName
     {
         get { return $"{FirstName} {LastName}"; }
@@ -17,5 +19,5 @@ public class AccountHolder
     [DisplayName("Email")]
     public string Email { get; set; } = string.Empty;
 
-    public List<AccountHolderAccount> BankAccounts { get; set; } = new();
+    public List<BankAccount> BankAccounts { get; set; } = new();
 }

@@ -12,6 +12,12 @@
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AccountHolder.FullName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AccountHolder.FullName)
+        </dd>
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.AccountHolder.FirstName)
         </dt>
         <dd class="col-sm-10">
@@ -49,21 +55,18 @@
                     @foreach (var item in Model.AccountHolder.BankAccounts)
                     {
                         <tr>
-                            <td>
-                                @item.BankAccount?.AccountNumber
-                            </td>
-                            <td>
-                                @item.BankAccount?.AccountType
-                            </td>
-                            <td>
-                                @item.BankAccount?.Balance.ToString("C2")
-                            </td>
+                            <td>@item.AccountNumber</td>
+                            <td>@item.AccountType</td>
+                            <td>@item.Balance.ToString("C2")</td>
                         </tr>
                     }
 
                     @{
                         var totalBalance = Model.AccountHolder.BankAccounts
-                            .Sum(x => x.BankAccount?.Balance ?? 0m);
+                            .Sum(x => x.Balance);
+
+                        var accountCount = Model.AccountHolder.BankAccounts
+                            .Count();
                     }
 
                     <tr>
@@ -77,9 +80,7 @@
             </table>
 
             <p>
-                <strong>
-                    @Model.AccountHolder.BankAccounts.Count Account(s) Found
-                </strong>
+                <strong>@accountCount Account(s) Found</strong>
             </p>
         </div>
     }

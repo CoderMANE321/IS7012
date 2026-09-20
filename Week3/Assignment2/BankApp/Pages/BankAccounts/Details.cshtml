@@ -12,6 +12,12 @@
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
+            Account Holder
+        </dt>
+        <dd class="col-sm-10">
+            @Model.BankAccount.AccountHolder?.FullName
+        </dd>
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.BankAccount.AccountNumber)
         </dt>
         <dd class="col-sm-10">

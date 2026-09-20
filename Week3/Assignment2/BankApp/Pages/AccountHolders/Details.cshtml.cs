@@ -29,7 +29,6 @@ namespace BankApp.Pages.AccountHolders
 
             var accountholder = await _context.AccountHolders
                 .Include(a => a.BankAccounts)
-                .ThenInclude(aha => aha.BankAccount)
                 .FirstOrDefaultAsync(m => m.AccountHolderId == id);
 
             if (accountholder is not null)
