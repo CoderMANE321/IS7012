@@ -50,7 +50,7 @@ public class Company
     [DisplayName("Industry")]
     public int IndustryId { get; set; }
 
-    public Industry Industry { get; set; }
+    public Industry? Industry { get; set; }
 
     public ICollection<Candidate> Candidates { get; set; } = new List<Candidate>();
 }

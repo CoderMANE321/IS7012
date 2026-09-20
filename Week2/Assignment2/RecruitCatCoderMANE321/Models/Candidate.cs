@@ -46,10 +46,10 @@ public class Candidate
     [DisplayName("Job Title")]
     public int JobTitleId { get; set; }
 
-    public JobTitle JobTitle { get; set; }
+    public JobTitle? JobTitle { get; set; }
 
     [DisplayName("Industry")]
     public int IndustryId { get; set; }
 
-    public Industry Industry { get; set; }
+    public Industry? Industry { get; set; }
 }
