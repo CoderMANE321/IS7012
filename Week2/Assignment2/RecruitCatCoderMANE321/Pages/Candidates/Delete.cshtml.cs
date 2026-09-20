@@ -29,7 +29,11 @@ namespace RecruitCatCoderMANE321.Pages.Candidates
                 return NotFound();
             }
 
-            var candidate = await _context.Candidates.FirstOrDefaultAsync(m => m.Id == id);
+            var candidate = await _context.Candidates
+                .Include(c => c.Company)
+                .Include(c => c.Industry)
+                .Include(c => c.JobTitle)
+                .FirstOrDefaultAsync(m => m.Id == id);
 
             if (candidate is not null)
             {

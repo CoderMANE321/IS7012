@@ -2,10 +2,10 @@
 @model RecruitCatCoderMANE321.Pages.Companies.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Companies";
 }
 
-<h1>Index</h1>
+<h1>Companies</h1>
 
 <p>
     <a asp-page="Create">Create New</a>
@@ -27,9 +27,6 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Company[0].StartDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Company[0].Location)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Company[0].Website)
@@ -65,9 +62,6 @@
                 @Html.DisplayFor(modelItem => item.StartDate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Location)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Website)
             </td>
             <td>
@@ -77,7 +71,7 @@
                 @Html.DisplayFor(modelItem => item.OffersRemoteWork)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Industry.Id)
+                @item.Industry?.Name
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |

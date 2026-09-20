@@ -28,7 +28,9 @@ namespace RecruitCatCoderMANE321.Pages.Companies
                 return NotFound();
             }
 
-            var company = await _context.Companies.FirstOrDefaultAsync(m => m.Id == id);
+            var company = await _context.Companies
+                .Include(c => c.Industry)
+                .FirstOrDefaultAsync(m => m.Id == id);
 
             if (company is not null)
             {

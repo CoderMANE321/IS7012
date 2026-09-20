@@ -2,13 +2,13 @@
 @model RecruitCatCoderMANE321.Pages.Candidates.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Candidates";
 }
 
-<h1>Index</h1>
+<h1>Candidates</h1>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create">Create New Candidate</a>
 </p>
 <table class="table">
     <thead>
@@ -74,10 +74,10 @@
                 @item.Company?.Name
             </td>
             <td>
-                @item.JobTitle?.Title)
+                @item.JobTitle?.Title
             </td>
             <td>
-                @item.Industry?.Name)
+                @item.Industry?.Name
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
