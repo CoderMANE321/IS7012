@@ -27,7 +27,10 @@ namespace BankApp.Pages.AccountHolders
                 return NotFound();
             }
 
-            var accountholder = await _context.AccountHolders.FirstOrDefaultAsync(m => m.AccountHolderId == id);
+            var accountholder = await _context.AccountHolders
+                .Include(a => a.BankAccounts)
+                .ThenInclude(aha => aha.BankAccount)
+                .FirstOrDefaultAsync(m => m.AccountHolderId == id);
 
             if (accountholder is not null)
             {
