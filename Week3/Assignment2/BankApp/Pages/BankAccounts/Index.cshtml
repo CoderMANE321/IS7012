@@ -5,15 +5,17 @@
     ViewData["Title"] = "Bank Accounts";
 }
 
-<h1>Index</h1>
+<h1>Bank Accounts</h1>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create">Create New Bank Account</a>
 </p>
 <table class="table">
     <thead>
         <tr>
-
+            <th>
+                @Html.DisplayNameFor(model => model.BankAccount[0].AccountNumber)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.BankAccount[0].AccountType)
             </th>
@@ -26,6 +28,9 @@
     <tbody>
 @foreach (var item in Model.BankAccount) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountNumber)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.AccountType)
             </td>
