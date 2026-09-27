@@ -1,0 +1,59 @@
+@page
+@model MovieApp.Pages.Movies.SearchModel
+
+@{
+    ViewData["Title"] = "Movie Search";
+}
+
+<h1>Movie Search</h1>
+
+<form method="get">
+    <div class="form-group mb-3">
+        <label asp-for="SearchString">Movie Title</label>
+
+        <input asp-for="SearchString"
+               class="form-control"
+               placeholder="Enter starting characters" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+        Search
+    </button>
+</form>
+
+<hr />
+
+@if (!string.IsNullOrWhiteSpace(Model.SearchString))
+{
+    <h3>Search Results</h3>
+
+    @if (Model.Movies.Count == 0)
+    {
+        <p>No movies found.</p>
+    }
+    else
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Director</th>
+                    <th>Genre</th>
+                    <th>Release Year</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var movie in Model.Movies)
+                {
+                    <tr>
+                        <td>@movie.Title</td>
+                        <td>@movie.Director</td>
+                        <td>@movie.Genre</td>
+                        <td>@movie.ReleaseYear</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+}
